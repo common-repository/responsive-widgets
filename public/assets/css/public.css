@@ -1,0 +1,111 @@
+/******************************************************************
+Site Name: http://Scientifik.com
+Author: Ben Racicot
+Version: 1.0.0
+Stylesheet: Widget Styles
+*******************************************************************/
+.mobile-only { display: block; }
+
+
+.phablet { display: none; } 
+.desktop-only { display: none; }
+.large-screen-widget { display: none; }
+.mobile-landscape-only { display: none; }
+.mobile-landscape-only { display: none; }
+.iphone5-only { display: none; }
+.retina-only { display: none; }
+.large-screen-only { display: none; }
+
+/*.scientifik-windows-phone { display: none; }*/
+
+.tablet-landscape { display: none; }
+.tablet-portrait { display: none; }
+
+.print-query { display: none; }
+.scientifik-ipad-portrait-widget { display: none; }
+.scientifik-ipad-landscape-widget { display: none; }
+
+/*.scientifik-generic-tablet{ display: none; }*/
+/*.scientifik-android{ display:none; }*/
+
+/* Phablet query 481px / 30.063em */
+@media only screen and (min-width: 30.063em){
+  .mobile-only { display: none; }
+  .phablet { display: block; }
+}
+
+/* Tablet Query 768px / 48.000em */
+@media only screen and (min-width: 48.000em) {
+  .phablet { display: none; }
+  .tablet-only { display: block; }
+}
+/* Desktop query 1030px / 64.375em*/
+@media only screen and (min-width: 64.375em) {
+	.tablet-only { display: none; }
+  .desktop-only { display: none; }
+}
+
+/* Large Screen Sizes 1240px / 77.500em*/
+@media only screen and (min-width: 77.500em) {
+	.desktop-only { display: none; }
+	.large-screen-widget { display: block; }
+}
+
+
+/***** Specialty media queries *****/
+
+/* Mobile Landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px) and (orientation : landscape){ 
+	.mobile-only { display: none; }
+  .phablet { display: none; }
+	.mobile-landscape-only { display: block; }
+}
+
+/* iPhone 5 or iPod Touch 5th generation styles */
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : portrait) {
+	.mobile-only { display: none; }
+	.tablet-only { display: none; }
+	.scientifik-iphone5-landscape{ display: none; }
+	.scientifik-iphone5-portrait{ display: block; }
+}
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : landscape) {
+	.mobile-only { display: none; }
+	.tablet-only { display: none; }
+	.scientifik-iphone5-portrait{ display: none; }
+	.scientifik-iphone5-landscape{ display: block; }
+}
+
+/* tablet (landscape) */
+@media only screen and (min-device-width : 48.000em) and (max-device-width : 64.000em) and (orientation : landscape) {
+	.tablet-landscape{ display: block; }
+}
+/*tablet (portrait)*/
+@media only screen and (min-device-width : 48.000em) and (max-device-width : 63.938em) and (orientation : portrait) { 
+	.tablet-portrait{ display: block; }
+}
+
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+	.retina-only{ display: block; }
+}*/
+
+/*ipad portrait*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.iphone5-only{ display: none; }
+	.scientifik-ipad-portrait-widget{ display: block; }
+}
+/*ipad landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	.iphone5-only{ display: none; }
+	.scientifik-ipad-landscape-widget{ display: block; }
+}
+
+
+@media print { .print-query{ display: block; } }
